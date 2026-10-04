@@ -1,0 +1,23 @@
+@use 'variables';
+
+.game-field{
+display: grid;
+grid-template-columns: repeat(4 , 1fr);
+padding: 40px;
+gap: 20px;
+width: 35%;
+height: 35%;
+}
+.card{
+background-image: variables.$card-reverse;
+font-family: variables.$main-font;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+aspect-ratio: 1 / 1;
+border-radius: 10px;
+transition: transform 0.3s ease-in-out;
+&:hover{
+transform: scale(1.1);
+}
+    }

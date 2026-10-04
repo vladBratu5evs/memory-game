@@ -1,0 +1,8 @@
+@use 'variables';
+
+.leaderboard-container{
+    display: none;
+}
+.leaderboard-container.active{
+    display: flex;
+}

@@ -1,1 +1,5 @@
-$background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
+
+$main-font: "New Rocker", system-ui, sans-serif;
+$background-image: url('../assets/img/background.jpg');
+$card-reverse: url('../assets/img/card-reverse-side.jpeg')
