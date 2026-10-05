@@ -4,13 +4,11 @@ export function createHeader() {
   header.className = "header";
 
     const newGameBtn = document.createElement("button");
-    newGameBtn.className = "";
-    newGameBtn.id = "new-game-btn";
+    // newGameBtn.className = "";
     newGameBtn.textContent = "New Game";
 
     const leaderboardBtn = document.createElement("button");
-    leaderboardBtn.className = "";
-    leaderboardBtn.id = "leaderboard-btn";
+    // leaderboardBtn.className = "";
     leaderboardBtn.textContent = "Leaderboard";
 
     document.body.prepend(header);

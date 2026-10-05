@@ -1,6 +1,7 @@
 import { createHeader } from './header.js';
 import { resetGame } from './game-field.js';
 import { createCounters } from './counters.js';
+import { createLeaderboard } from './leaderboard.js';
 
 
 
@@ -10,10 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(mainContainer);
 
     const header = createHeader();
-    const counters = createCounters();
+    createCounters();
     resetGame();
+    createLeaderboard();
 
     header.newGameBtn.addEventListener("click", () => {
         resetGame();
         });
+
+    header.leaderboardBtn.addEventListener("click", () => {
+        const leaderboard = document.querySelector(".leaderboard-container");
+        if (leaderboard) {
+            leaderboard.classList.toggle("active");
+        }
+});
     });
