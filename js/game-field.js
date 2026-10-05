@@ -1,4 +1,6 @@
-function createGameField () {
+import { addMove, addPair, resetCounters } from "./counters.js";
+
+export function createGameField () {
 
     const fieldContainer = document.createElement("div");
     fieldContainer.className = "game-field";
@@ -9,11 +11,14 @@ function createGameField () {
         cardItem.addEventListener('click', () => handleCardClick(cardItem));
         fieldContainer.appendChild(cardItem);
     }
-    document.body.appendChild(fieldContainer);
+
+    const mainContainer = document.querySelector(".main-container");
+    mainContainer.appendChild(fieldContainer);
+
     return fieldContainer;
 }
 
-function shuffleCards() {
+export function shuffleCards() {
 const mainCards = [
     'assets/cards/acdc.png',
     'assets/cards/gojira.png',
@@ -56,9 +61,11 @@ function handleCardClick(cardItem) {
   flippedCards.push(cardItem);
 
   if (flippedCards.length === 2) {
+    addMove();
       const [card1, card2] = flippedCards;
 
       if (card1.dataset.value === card2.dataset.value) {
+          addPair();
           setTimeout(() => {
               card1.classList.add('isHidden');
               card2.classList.add('isHidden');
@@ -74,13 +81,13 @@ function handleCardClick(cardItem) {
   }
 }
 
-
-
 export function resetGame() {
     if (document.querySelector(".game-field")) {
         document.querySelector(".game-field").remove();
     }
+
     flippedCards = [];
+    resetCounters();
     createGameField();
     const newDeck = shuffleCards();
     assignShuffledCards(newDeck)

@@ -13,13 +13,6 @@ export function createHeader() {
     leaderboardBtn.id = "leaderboard-btn";
     leaderboardBtn.textContent = "Leaderboard";
 
-    // const leaderboardContainer = document.createElement("div");
-    // leaderboardContainer.className = "leaderboard-container";
-    // header.appendChild(leaderboardContainer);
-
-
-
-    
     document.body.prepend(header);
     header.appendChild(newGameBtn);
     header.appendChild(leaderboardBtn);
