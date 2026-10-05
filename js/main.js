@@ -1,13 +1,15 @@
 import { createHeader } from './header.js';
-import { createGameField } from './game-field.js';
+import { resetGame } from './game-field.js';
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const header = createHeader();
+    resetGame();
+
 
     header.newGameBtn.addEventListener("click", () => {
-        createGameField ();
-    })
-});
+        resetGame();
+        });
+    });
