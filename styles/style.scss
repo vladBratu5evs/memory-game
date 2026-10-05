@@ -1,6 +1,5 @@
 @use 'components/variables';
 @use 'components/header';
-@use 'components/cards';
 @use 'components/leaderboard-container';
 @use 'components/normalize';
 @use 'components/main';
@@ -17,6 +16,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  background-attachment: fixed;
   font: variables.$main-font;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,6 @@ transition: all 0.3s ease;
 &:hover {
   background-color: #FF2400;
   color: black;
-  ease: all 0.3s;
 }
 }
 
