@@ -1,0 +1,41 @@
+@use 'components/variables';
+@use 'components/header';
+@use 'components/leaderboard-container';
+@use 'components/normalize';
+@use 'components/main';
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body {
+  background-image: variables.$background-image;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+  font: variables.$main-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+font-family: variables.$main-font;
+padding: 20px;
+background-color: black;
+color: #FF2400;
+border-radius: 60px;
+border: solid;
+border: 1px;
+transition: all 0.3s ease;
+&:hover {
+  background-color: #FF2400;
+  color: black;
+}
+}
+
+

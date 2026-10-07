@@ -1,0 +1,98 @@
+@use 'variables';
+
+.game-field{
+display: grid;
+grid-template-columns: repeat(4 , 1fr);
+gap: 20px;
+width: 100%;
+max-width: 800px;
+height: auto;
+}
+.card {
+background-image: variables.$card-reverse;
+font-family: variables.$main-font;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+aspect-ratio: 1 / 1;
+border-radius: 10px;
+width: 100%;
+transition: transform 0.3s ease-in-out;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #fff;
+
+
+& img{
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #fff;
+}
+
+&.isClicked{
+  background-image: none;
+  background-color: #fff;
+  & img {
+    visibility:visible;
+  }
+}
+
+&.isHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+&:hover{
+transform: scale(1.05);
+}
+}
+.counter-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.counter{
+font-family: variables.$main-font;
+padding: 20px;
+background-color: black;
+color: #FF2400;
+border-radius: 60px;
+border: solid;
+border: 1px;
+width: 150px;
+}
+.main-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+.victory-modal{
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(1px);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 99999;
+}
+.modal-message{
+font-family: variables.$main-font;
+padding: 20px;
+background-color: black;
+color: #FF2400;
+border-radius: 60px;
+border: solid;
+border: 1px;
+}

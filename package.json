@@ -1,0 +1,10 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "scripts": {
+    "sass:watch": "sass --watch styles/style.scss:styles/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

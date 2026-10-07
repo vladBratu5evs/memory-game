@@ -1,0 +1,31 @@
+@use 'variables';
+
+.leaderboard-container{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1px);
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    &.active{
+    visibility: visible;
+}
+}
+
+
+.line{
+font-family: variables.$main-font;
+padding: 20px;
+background-color: black;
+color: #FF2400;
+border-radius: 60px;
+border: solid;
+border: 1px;
+}
